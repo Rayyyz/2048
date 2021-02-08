@@ -175,7 +175,7 @@ $(document).keydown(function (event) {
 
 document.addEventListener('touchmove', function (event) {
     event.preventDefault();
-});
+}, { passive: false });
 
 document.addEventListener('touchstart', function (event) {
     startx = event.touches[0].pageX;
@@ -190,7 +190,7 @@ document.addEventListener('touchend', function (event) {
     var deltaY = endy - starty;
 
     //小于一定幅度的滑动视为“点击”，不进行操作
-    if (Math.abs(deltaX) < 0.3 * documentWidth && Math.abs(deltaY) < 0.3 * documentWidth) {
+    if (Math.abs(deltaX) < 0.2 * documentWidth && Math.abs(deltaY) < 0.2 * documentWidth) {
         return;
     }
 
