@@ -59,7 +59,9 @@ function init() {
     updateBoardView();
 
     score = 0;
+    updateScore(score);
 }
+
 
 function updateBoardView() {
 
@@ -235,7 +237,7 @@ function isgameover() {
 }
 
 function gameover() {
-    alert('game over!');
+    alert('Game Over!\nYour score is ' + score);
 }
 
 function moveLeft() {
